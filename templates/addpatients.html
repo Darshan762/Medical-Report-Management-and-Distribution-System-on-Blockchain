@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Health - Medical Website Template</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="static/css/animate.css">
+     <link rel="stylesheet" href="static/css/owl.carousel.css">
+     <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="static/css/tooplate-style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a class="navbar-brand">MEDICAL REPORT MANAGEMENT & DISTRIBUTION SYSTEM ON BLOCK CHAINMEDICAL REPORT MANAGEMENT & DISTRIBUTION SYSTEM ON BLOCK CHAIN</a>
+               </div>
+
+               <!-- MENU LINKS -->
+       <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="{{url_for('addpatients')}}" class="smoothScroll">Add Patient</a></li>
+                         <li><a href="{{url_for('viewpatients')}}" class="smoothScroll">View Patients</a></li>
+                         <li><a href="{{url_for('logout')}}" class="smoothScroll">Logout</a></li>
+
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+
+     <!-- MAKE AN APPOINTMENT -->
+     <section id="appointment" data-stellar-background-ratio="3" style="background-position: 0px 140px;padding-top: 0px;">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="static/images/appointment-image.jpg" class="img-responsive" alt="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6" style="padding-top: 143px;">
+                         <!-- CONTACT FORM HERE -->
+                         <form id="appointment-form" role="form" method="post" action="{{url_for('addpatients')}}">
+
+                              <!-- SECTION TITLE -->
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                   <h2>Patient Information</h2>
+                                   <center><h3 style="color:orange;">{{ msg }}</h3></center>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">USER NAME</label>
+                                        <input type="text" class="form-control" id="name" name="Name" placeholder="Patient Name">
+                                   </div>
+                                  <div class="col-md-6 col-sm-6">
+                                        <label for="name">AGE</label>
+                                        <input type="text" class="form-control" id="age" name="Age" placeholder="Patient Age">
+                                   </div>
+                                  <div class="col-md-6 col-sm-6">
+                                        <label for="name">Contact</label>
+                                        <input type="text" class="form-control" id="name" name="Contact" placeholder="Contact Number">
+                                   </div>
+                                  <div class="col-md-6 col-sm-6">
+                                        <label for="name">Email</label>
+                                        <input type="email" class="form-control" id="name" name="Email" placeholder="Email">
+                                   </div>
+                                  <div class="col-md-6 col-sm-6">
+                                        <label for="name">Address</label>
+                                        <input type="text" class="form-control" id="name" name="Address" placeholder="Patient Address">
+                                   </div>
+                                  <div class="col-md-6 col-sm-6">
+                                        <label for="name">Symptoms</label>
+                                        <input type="text" class="form-control" id="name" name="Symptoms" placeholder="Enter symptoms">
+                                   </div>
+                                  <div class="col-md-6 col-sm-6">
+                                      <label for="name">Department</label>
+                                      <select class="form-select wide" class="" name="Department" required>
+                                            <option data-display="Please select Department to visit">Please select Department to visit </option>
+                                            <option value="Pulmonary">Pulmonary</option>
+                                            <option value="Cardiology">Cardiology</option>
+                                            <option value="Neurology">Neurology</option>
+                                            <option value="Traumatology">Traumatology</option>
+                                            <option value="Dental">Dental</option>
+                                            <option value="Nuclear">Nuclear</option>
+                                            <option value="magnetic">magnetic</option>
+                                            <option value="Pregnancy">Pregnancy</option>
+                                            <option value="For disabled">For disabled</option>
+                                            <option value="X-ray">X-ray</option>
+                                            <option value="Prostheses">Prostheses</option>
+                                            <option value="Orthopedic">Orthopedic</option>
+                                            <option value="Dermatologist">Dermatologist</option>
+                                            <option value="Medical Specialist">Medical Specialist</option>
+                                        </select>
+
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="email">PASSWORD</label>
+                                        <input type="password" class="form-control" id="email" name="Password" placeholder="Your Password">
+                                   </div>
+
+                                   <div class="col-md-6">
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Add</button>
+                                   </div>
+                              </div>
+                        </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- GOOGLE MAP -->
+     <!-- FOOTER -->
+
+     <!-- SCRIPTS -->
+     <script src="static/js/jquery.js"></script>
+     <script src="static/js/bootstrap.min.js"></script>
+     <script src="static/js/jquery.sticky.js"></script>
+     <script src="static/js/jquery.stellar.min.js"></script>
+     <script src="static/js/wow.min.js"></script>
+     <script src="static/js/smoothscroll.js"></script>
+     <script src="static/js/owl.carousel.min.js"></script>
+     <script src="static/js/custom.js"></script>
+
+</body>
+</html>

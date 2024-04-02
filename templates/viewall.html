@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Health - Medical Website Template</title>
+<!--
+
+Template 2098 Health
+
+http://www.tooplate.com/view/2098-health
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/animate.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/owl.theme.default.min.css')}}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{{url_for('static',filename='css/tooplate-style.css')}}">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<style>
+              table,th,td { border: 2px solid black;
+                            border-collapse:collapse; }
+          </style>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!-- HEADER -->
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+<a class="navbar-brand">MEDICAL REPORT MANAGEMENT & DISTRIBUTION SYSTEM ON BLOCK CHAINMEDICAL REPORT MANAGEMENT & DISTRIBUTION SYSTEM ON BLOCK CHAIN</a>               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="" class="smoothScroll">HOME</a></li>
+                        <li><a href="{{url_for('allpatients')}}" class="smoothScroll">VIEW PATIENTS</a></li>
+                        <li><a href="{{url_for('allreports',m=m,n=n)}}" class="smoothScroll">REPORTS</a></li>
+                        <li><a href="{{url_for('logout')}}" class="smoothScroll">LOGOUT</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                   <div class="owl-carousel owl-theme">
+                       <div class="item item-second">
+
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h2>Patient Information</h2>
+
+                                               <!-- On tables -->
+                                            <table style="width:100%">
+                                                 <tr>
+                                                    <th style="text-align:center;">ID :</th>
+                                                    <td>{{ id }}</td>
+                                                     
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align:center;">Name :</th>
+                                                    <td>{{ name }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align:center;">Age :</th>
+                                                    <td>{{age}}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th style="text-align:center;">Contack Number :</th>
+                                                    <td>{{contact}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align:center;">Email :</th>
+                                                    <td>{{email}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align:center;">Address :</th>
+                                                    <td>{{address}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align:center;">Symptoms :</th>
+                                                    <td>{{symptom}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align:center;">Department :</th>
+                                                    <td>{{Dept}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align:center;">Joining Date :</th>
+                                                    <td>{{date}}</td>
+                                                </tr>
+
+                                            </table>
+
+
+                                        </div>
+                                   </div>
+                              </div>
+
+
+                         </div>
+
+               </div>
+          </div>
+     </section>
+     <!-- SCRIPTS -->
+     <script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+     <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.sticky.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/smoothscroll.js')}}"></script>
+     <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+     <script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Health - Medical Website Template</title>
+<!--
+
+Template 2098 Health
+
+http://www.tooplate.com/view/2098-health
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="static/css/animate.css">
+     <link rel="stylesheet" href="static/css/owl.carousel.css">
+     <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="static/css/tooplate-style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<style>
+              table,th,td { border: 2px solid black;
+                            border-collapse:collapse; }
+          </style>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!-- HEADER -->
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+<a class="navbar-brand">MEDICAL REPORT MANAGEMENT & DISTRIBUTION SYSTEM ON BLOCK CHAINMEDICAL REPORT MANAGEMENT & DISTRIBUTION SYSTEM ON BLOCK CHAIN</a>               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="{{url_for('addpatients')}}" class="smoothScroll">Add Patient</a></li>
+                         <li><a href="{{url_for('viewpatients')}}" class="smoothScroll">View Patients</a></li>
+                         <li><a href="{{url_for('logout')}}" class="smoothScroll">Logout</a></li>
+
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                   <div class="owl-carousel owl-theme">
+                       <div class="item item-second">
+
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h2>Patients</h2>
+                                            <table style="width:100%;">
+                                                <tr>
+                                                    {% for i in cols %}
+                                                    <th style="color:yellow;text-align:center;"><b>{{ i }}</b></th>
+                                                    {% endfor %}
+                                                </tr>
+
+                                                {% for row in rows %}
+                                                <tr>
+                                                    {% for value in row %}
+                                                    <td>{{value}}</td>
+                                                    {% endfor %}
+                                                </tr>
+                                                {% endfor %}
+
+                                                </table>
+
+                                        </div>
+                                   </div>
+                              </div>
+
+
+                         </div>
+
+               </div>
+          </div>
+     </section>
+     <!-- SCRIPTS -->
+     <script src="static/js/jquery.js"></script>
+     <script src="static/js/bootstrap.min.js"></script>
+     <script src="static/js/jquery.sticky.js"></script>
+     <script src="static/js/jquery.stellar.min.js"></script>
+     <script src="static/js/wow.min.js"></script>
+     <script src="static/js/smoothscroll.js"></script>
+     <script src="static/js/owl.carousel.min.js"></script>
+     <script src="static/js/custom.js"></script>
+
+</body>
+</html>
